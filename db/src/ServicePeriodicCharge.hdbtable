@@ -1,0 +1,9 @@
+----- ServicePeriodicCharge.hdbtable -----
+COLUMN TABLE ServicePeriodicCharge (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "serviceId" NVARCHAR(20) NOT NULL,
+  "periodType" NVARCHAR(1) NOT NULL,
+  "period" NVARCHAR(8) NOT NULL,
+  "periodUsageCharge" DECIMAL(14, 3) NOT NULL,
+  PRIMARY KEY("clientId", "serviceId", "periodType", "period")
+)

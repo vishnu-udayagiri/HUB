@@ -1,0 +1,9 @@
+----- ServiceUnitCharge.hdbtable -----
+COLUMN TABLE "ServiceUnitCharge" (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "serviceId" NVARCHAR(20) NOT NULL,
+  "usedOn" TIMESTAMP NOT NULL,
+  "currency" NVARCHAR(5) NOT NULL,
+  "unitUsageCharge" DECIMAL(14, 3) NOT NULL,
+  PRIMARY KEY("clientId", "serviceId", "usedOn")
+)

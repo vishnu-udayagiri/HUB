@@ -1,0 +1,95 @@
+_schema-version: '3.2'
+ID: OptiHubDEV
+version: 0.0.1
+
+parameters:
+  enable-parallel-deployments: true
+  keep-existing-routes: true
+
+modules:
+
+  - name: apihub-dev-backend
+    type: nodejs
+    path: srv
+    build-parameters:
+      ignore:
+        - default-*.json
+        - .env
+        - "*node_modules*"
+        - package-lock.json
+    parameters:
+      buildpack: nodejs_buildpack
+      stack: cflinuxfs4
+      memory: 512M
+      disk-quota: 1024M
+      keep-existing:
+        service-bindings: true
+    requires:
+      - name: optihub-uaa
+      - name: APIHUB_DEV
+    provides:
+      - name: hub
+        properties:
+          srv-url: ${default-url}
+      - name: admin
+        properties:
+          admin-url: ${default-url}
+
+  - name: apihub-portal
+    type: html5
+    path: ui5/web/portal
+    build-parameters:
+      builder: custom
+      commands:
+      - npm install
+      - ui5 build --dest ../../../app/web/portal/webapp
+      supported-platforms: []
+
+  - name: apihub-admin-portal
+    type: html5
+    path: ui5/web/admin
+    build-parameters:
+      builder: custom
+      commands:
+      - npm install
+      - ui5 build --dest ../../../app/web/admin/webapp
+      supported-platforms: []
+
+  - name: optihub-app
+    type: approuter.nodejs
+    path: app
+    build-parameters:
+      ignore:
+        - default-*.json
+        - .env
+        - "*node_modules*"
+        - package-lock.json
+    parameters:
+      memory: 256M
+      disk-quota: 1024M   
+    requires:
+      - name: optihub-uaa
+      - name: hub
+        group: destinations
+        properties:
+          name: hub
+          url: ~{srv-url}
+          timeout: 600000
+      - name: admin
+        group: destinations
+        properties:
+          name: admin
+          url: ~{admin-url}
+          timeout: 600000
+          forwardAuthToken: true
+      
+resources:
+  # ----------------------- UAA SERVICE ------------------------
+  - name: optihub-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+  - name: APIHUB_DEV
+    type: com.sap.xs.hdi-container

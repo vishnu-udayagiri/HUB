@@ -1,0 +1,12 @@
+----- ShortUrl.hdbtable -----
+COLUMN TABLE "ShortUrl" (
+  "Id" NVARCHAR(36) NOT NULL ,
+  "clientId" NVARCHAR(36) NOT NULL,
+  "shortUrlKey" NVARCHAR(7) NOT NULL,
+  "shortUrl" NVARCHAR(100) NOT NULL,
+  "longUrl" NVARCHAR(2000) NOT NULL,
+  "createdDate" TIMESTAMP,
+  "createdBy" NVARCHAR(241),
+  "active" BOOLEAN default true,
+  PRIMARY KEY("Id")
+)

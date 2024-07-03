@@ -1,0 +1,8 @@
+/* Enter your custom styles here */
+
+span.sapMBtnInner.sapMBtnReject {
+    background-image: none;
+    background-color: #302d2d00;
+    border-color: #b000;
+    color: #b00;
+}

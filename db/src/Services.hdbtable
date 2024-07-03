@@ -1,0 +1,6 @@
+----- Services.hdbtable -----
+COLUMN TABLE "Services" (
+  "serviceId" NVARCHAR(20) NOT NULL,
+  "serviceDesc" NVARCHAR(100) NOT NULL,
+  PRIMARY KEY("serviceId")
+)

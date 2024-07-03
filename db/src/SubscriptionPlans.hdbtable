@@ -1,0 +1,11 @@
+----- SubscriptionPlans.hdbtable -----
+COLUMN TABLE "SubscriptionPlans" (
+  "subscriptionPlanId" NVARCHAR(36) NOT NULL,
+  "countryKey" NVARCHAR(3) NOT NULL,
+  "subscriptionPlanDesc" NVARCHAR(40) NOT NULL,
+  "currency" NVARCHAR(5) NOT NULL,
+  "duration" INTEGER,
+  "isTrial" BOOLEAN NOT NULL,
+  "isActive" BOOLEAN NOT NULL,
+  PRIMARY KEY("subscriptionPlanId")
+)

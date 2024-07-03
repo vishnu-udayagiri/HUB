@@ -1,0 +1,90 @@
+<mvc:View xmlns="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc" controllerName="ivl.optihub.admindashboard.controller.Services"
+    xmlns:t="sap.ui.table" class="sapUiSizeCompact" height="100%">
+    <m:App id="app">
+        <m:pages>
+            <m:Page id="_IDGenPage1" showHeader="false" floatingFooter="true">
+                <m:content>
+                    <ObjectPageLayout id="ObjectPageLayout" showFooter="true" upperCaseAnchorBar="false" showHeaderContent="false">
+                        <sections>
+                            <!-- Create Services -->
+                            <ObjectPageSection title="{i18n>ttlCreateService}" showTitle="false" id="ID_CreateSection" titleUppercase="false">
+                                <subSections>
+                                    <ObjectPageSubSection>
+                                        <m:Panel>
+                                            <m:headerToolbar>
+                                                <m:OverflowToolbar>
+                                                    <m:Title id="ID_TitleService" text="{i18n>ttlCreateService}"></m:Title>
+                                                    <m:ToolbarSpacer />
+                                                    <m:Button id="ID_CreateService" press="onCreateService" text="{i18n>btnTxtCreate}" icon="sap-icon://create" visible="{= !${/toggleEdit}}"/>
+                                                    <!-- Edit Press -->
+                                                    <m:Button id="ID_SaveService" press="onCreateService" text="{i18n>btnTxtSave}" icon="sap-icon://save" visible="{= ${/toggleEdit}}"/>
+                                                    <m:Button id="ID_CancelService" press="onCancelEditService" text="{i18n>btnTxtCancel}" icon="sap-icon://cancel" type="Reject" visible="{= ${/toggleEdit}}"/>
+                                                </m:OverflowToolbar>
+                                            </m:headerToolbar>
+                                            <m:content>
+                                                <form:SimpleForm layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+                                                    <form:content>
+                                                        <m:Label text="{i18n>txtServiceId}" required="true"/>
+                                                        <m:Input id="ID_serviceId" value="{newServiceModel>/serviceId}" maxLength="20" editable="{= !${/toggleEdit}}"/>
+
+                                                        <m:Label text="{i18n>txtServiceDesc}" required="true"/>
+                                                        <m:Input id="ID_serviceDesc" value="{newServiceModel>/serviceDesc}" maxLength="100"/>
+                                                    </form:content>
+                                                </form:SimpleForm>
+                                            </m:content>
+                                        </m:Panel>
+                                    </ObjectPageSubSection>
+                                </subSections>
+                            </ObjectPageSection>
+                            <!-- Services List -->
+                            <ObjectPageSection title="{i18n>ttlServiceList}" showTitle="false" id="listSection" titleUppercase="false">
+                                <subSections>
+                                    <ObjectPageSubSection >
+                                        <m:Panel>
+                                            <m:headerToolbar>
+                                                <m:OverflowToolbar>
+                                                    <m:Title text="{i18n>ttlServiceList}"></m:Title>
+                                                    <m:ToolbarSpacer />
+                                                    <!-- <m:Button text="{i18n>btnTxtCreate}" icon="sap-icon://create"/> -->
+                                                </m:OverflowToolbar>
+                                            </m:headerToolbar>
+                                            <m:content>
+                                                <t:Table rowActionCount="2" rows="{serviceListModel>/}" enableColumnReordering="false" selectionMode="Single" id="ID_ServiceList">
+                                                    <t:columns>
+                                                        <t:Column filterProperty="serviceId">
+                                                            <m:Label text="{i18n>txtService}"/>
+                                                            <t:template>
+                                                                <m:Text text="{serviceListModel>serviceId}"/>
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column filterProperty="serviceDesc">
+                                                            <m:Label text="{i18n>txtDescription}"/>
+                                                            <t:template>
+                                                                <m:Text text="{serviceListModel>serviceDesc}"/>
+                                                            </t:template>
+                                                        </t:Column>
+                                                    </t:columns>
+                                                    <t:rowActionTemplate>
+                                                        <t:RowAction>
+                                                            <t:items>
+                                                                <t:RowActionItem icon="sap-icon://edit" press="onServiceEditPress"/>
+                                                                <t:RowActionItem type="Delete" icon="sap-icon://delete" press="onServiceDeletePress"/>
+                                                            </t:items>
+                                                        </t:RowAction>
+                                                    </t:rowActionTemplate>
+                                                </t:Table>
+                                            </m:content>
+                                        </m:Panel>
+                                    </ObjectPageSubSection>
+                                </subSections>
+                            </ObjectPageSection>
+                        </sections>
+                    </ObjectPageLayout>
+                </m:content>
+            </m:Page>
+        </m:pages>
+    </m:App>
+</mvc:View>

@@ -1,0 +1,71 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns="sap.f"
+    xmlns:chart="sap.suite.ui.microchart" xmlns:layout="sap.ui.layout" class="sapUiSizeCompact" height="100%" controllerName="com.ivl.optihub.ui5.controller.Dashboard">
+    <!-- <m:Page> -->
+        <uxap:ObjectPageLayout backgroundDesignAnchorBar="Transparent" id="ObjectPageLayout" upperCaseAnchorBar="false" showFooter="true" class="bg TBColor" showHeaderContent="false">
+            <uxap:sections>
+                <!-- Usage Details -->
+                    <!-- <uxap:ObjectPageSection id="_IDGenObjectPageSection1" titleUppercase="false">
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection id="_IDGenObjectPageSubSection1" title="{i18n>tabUsage}" >
+                                <layout:HorizontalLayout id="_IDGenHorizontalLayout1" allowWrapping="true">
+                                    <m:GenericTile id="_IDGenGenericTile1" header="PDF Extraction" subheader="559/2000" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" >
+                                        <m:tileContent>
+                                            <m:TileContent id="_IDGenTileContent1">
+                                                <m:content>
+                                                    <chart:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart1" total="2000" size="Responsive" alignContent="Center" totalScale="">
+                                                        <chart:items>
+                                                            <chart:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem1" fraction="559" color="Good" />
+                                                        </chart:items>
+                                                    </chart:HarveyBallMicroChart>
+                                                </m:content>
+                                            </m:TileContent>
+                                        </m:tileContent>
+                                    </m:GenericTile>
+                                    <m:GenericTile id="_IDGenGenericTile2" header="GSTIN Validation" subheader="559/2000" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout">
+                                        <m:TileContent id="_IDGenTileContent2">
+                                            <m:content>
+                                                <chart:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart2" total="2000" size="Responsive" alignContent="Center" totalScale="">
+                                                    <chart:items>
+                                                        <chart:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem2" fraction="785" color="Good" fractionScale="" />
+                                                    </chart:items>
+                                                </chart:HarveyBallMicroChart>
+                                            </m:content>
+                                        </m:TileContent>
+                                    </m:GenericTile>
+                                </layout:HorizontalLayout>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection> -->
+                <!-- Transactions -->
+                <uxap:ObjectPageSection id="_IDGenObjectPageSection2" titleUppercase="false">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection id="_IDGenObjectPageSubSection2" title="{i18n>tabSubscription}">
+                            <layout:HorizontalLayout id="_IDGenHorizontalLayout2" allowWrapping="true">
+                                <!-- Extract / Train PDF -->
+                                <m:GenericTile id="_IDGenGenericTile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>tileExtract}" press="openExtractPDF">
+                                    <m:TileContent id="_IDGenTileContent3" footer="{i18n>appExtractPDF}">
+                                        <m:ImageContent id="_IDGenImageContent1" src="sap-icon://request"/>
+                                    </m:TileContent>
+                                </m:GenericTile>
+                                <!-- GSTIN Validation -->
+                                <m:GenericTile id="_IDGenGenericTile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>titleGSTINValidation}" press="openValidatorForGST">
+                                    <m:TileContent id="_IDGenTileContent4" footer="{i18n>appValidateGSTIN}">
+                                        <m:ImageContent id="_IDGenImageContent2" src="sap-icon://validate"/>
+                                    </m:TileContent>
+                                </m:GenericTile>
+                                <m:GenericTile id="_IDGenGenericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>titleShortURL}" press="openURLShortner">
+                                    <m:TileContent id="_IDGenTileContent5" footer="{i18n>appShortURL}">
+                                        <m:ImageContent id="_IDGenImageContent3" src="sap-icon://chain-link"/>
+                                    </m:TileContent>
+                                </m:GenericTile>
+                            </layout:HorizontalLayout >
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+            </uxap:sections>
+        </uxap:ObjectPageLayout>
+    <!-- </m:Page> -->
+</mvc:View>

@@ -1,0 +1,20 @@
+----- HubClients.hdbtable-----
+COLUMN TABLE "HubClients" (
+  "clientId" NVARCHAR(36) NOT NULL ,
+  "clientName" NVARCHAR(100) NOT NULL,
+  "clientSecret" NVARCHAR(44),
+  "clientCode" NVARCHAR(20),
+  "countryKey" NVARCHAR(3),
+  "language" NVARCHAR(2),
+  "currency" NVARCHAR(5),
+  "subscriptionPlanId" NVARCHAR(36),
+  "subscriptionPaidAmt" DECIMAL(14, 3),
+  "subscriptionUsageAmt" DECIMAL(14, 3),
+  "subscriptionBalAmt" DECIMAL(14, 3),
+  "thresholdAmount" DECIMAL(14, 3),
+  "maxNoUsers" INTEGER DEFAULT 0,
+  "logo" NCLOB,
+  "isBlocked" BOOLEAN,
+  "blockReason" NVARCHAR(2),
+  PRIMARY KEY("clientId")
+)

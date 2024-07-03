@@ -1,0 +1,38 @@
+<mvc:View controllerName="com.ivl.optihub.ui5.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:tnt="sap.tnt"
+    xmlns="sap.m">
+    <App id="app">
+        <Page id="page" showHeader="{shellModel>/show}" class="myBackgroundStyle">
+            <customHeader >
+                <tnt:ToolHeader id="_IDGenToolHeader1" visible="{shellModel>/show}" class="sapUiResponsiveContentPadding">
+                    <Image id="_IDGenImage1" height="2rem" class="sapUiSmallMarginBegin" src="//www.ivldsp.com/wp-content/uploads/2018/07/fav.png" />
+                    <Title id="_IDGenTitle1" level="H1" text="{i18n>ttloptiHub}">
+                        <layoutData>
+                            <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" shrinkable="true" />
+                        </layoutData>
+                    </Title>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                    <Avatar id="_IDGenAvatar1" src="sap-icon://customer" backgroundColor="TileIcon" press="._handleSettigsPress" ariaHasPopup="Menu" displaySize="XS" class="sapUiMediumMarginEnd">
+                        <layoutData>
+                            <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData2" priority="NeverOverflow" />
+                        </layoutData>
+                    </Avatar>
+                </tnt:ToolHeader>
+            </customHeader>
+            <!-- <footer>
+                <Bar id="_IDGenBar1">
+                    <contentLeft>
+                        <Link id="_IDGenLink1" href="https://www.ivldsp.com/" text="©2022, InnoVaL Digital Solutions"></Link>
+                    </contentLeft>
+                    <contentMiddle>
+                    </contentMiddle>
+                    <contentRight>
+                    </contentRight>
+                </Bar>
+            </footer> -->
+            <NavContainer id="rootContainer" autoFocus="false">
+            </NavContainer>
+        </Page>
+    </App>
+</mvc:View>

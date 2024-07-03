@@ -1,0 +1,21 @@
+_schema-version: "2.1"
+ID: APIHub-BTP
+version: 0.0.1
+modules:
+- name: apihub-btp-db
+  type: hdb
+  path: db
+  requires:
+  - name: hdi_db
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+resources:
+- name: hdi_db
+  type: com.sap.xs.hdi-container
+  parameters:
+    service-name: APIHUB_DEV
+    config:
+      schema: APIHUB_DEV
+      makeUniqueName: false
+  properties:
+    hdi-container-name: ${service-name}

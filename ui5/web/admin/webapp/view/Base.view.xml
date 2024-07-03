@@ -1,0 +1,47 @@
+<mvc:View controllerName="ivl.optihub.admindashboard.controller.Base" class="sapUiSizeCompact"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt" height="100%">
+    <tnt:ToolPage id="toolPage">
+        <tnt:header>
+            <tnt:ToolHeader>
+                <Button id="sideNavigationToggleButton" icon="sap-icon://menu2" type="Transparent" press=".onSideNavButtonPress">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" />
+                    </layoutData>
+                </Button>
+                <Image height="1.5rem" class="sapUiSmallMarginBegin" src="https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg" />
+                <Title level="H1" text="{i18n>title}">
+                    <layoutData>
+                        <OverflowToolbarLayoutData shrinkable="true" />
+                    </layoutData>
+                </Title>
+                <tnt:ToolHeaderUtilitySeparator />
+                <ToolbarSpacer>
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px" />
+                    </layoutData>
+                </ToolbarSpacer>
+                <Avatar src="test-resources/sap/tnt/images/John_Miller.png" displaySize="XS" showBorder="true" press=".handleUserNamePress" ariaHasPopup="Menu">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" />
+                    </layoutData>
+                </Avatar>
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation id="sideNavigation" itemSelect=".onItemSelect">
+                <tnt:NavigationList id="navigationList" width="320px" selectedKey="dashboard">
+                    <tnt:NavigationListItem text="{i18n>txtDashbiard}" key="Dashboard" icon="sap-icon://bbyd-dashboard"/>
+                    <tnt:NavigationListItem text="{i18n>txtServices}" key="Services" icon="sap-icon://calendar" />
+                    <tnt:NavigationListItem text="{i18n>txtSubscriptionPlans}" key="SubscriptionPlans" icon="sap-icon://add-product" />
+                    <tnt:NavigationListItem text="{i18n>txtClientSubscriptionService}" key="SubscriptionService" icon="sap-icon://customer" />
+                    <tnt:NavigationListItem text="{i18n>txtClients}" key="Clients" icon="sap-icon://account" />
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <App id="myPage"></App>
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

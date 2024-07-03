@@ -1,0 +1,246 @@
+countryKey,countryName,language,currency
+AD,Andorra,ES,ADP
+AE,United Arab Emirates,AR,AED
+AF,Afghanistan,,AFA
+AG,Antigua and Barbuda,EN,
+AI,Anguilla,EN,
+AL,Albania,,ALL
+AM,Armenia,RU,AMD
+AN,Dutch Antilles,NL,ANG
+AO,Angola,PT,AON
+AQ,Antarctica,,
+AR,Argentina,ES,ARS
+AS,American Samoa,EN,
+AT,Austria,DE,EUR
+AU,Australia,EN,AUD
+AW,Aruba,NL,AWG
+AZ,Azerbaijan,TR,AZM
+BA,Bosnia and Herzegovina,HR,BAM
+BB,Barbados,EN,BBD
+BD,Bangladesh,EN,BDT
+BE,Belgium,FR,EUR
+BF,Burkina Faso,FR,
+BG,Bulgaria,,BGN
+BH,Bahrain,AR,BHD
+BI,Burundi,FR,BIF
+BJ,Benin,FR,
+BL,Blue,,
+BM,Bermuda,EN,BMD
+BN,Brunei Darussalam,,BND
+BO,Bolivia,ES,BOB
+BR,Brazil,PT,BRL
+BS,Bahamas,EN,BSD
+BT,Bhutan,,BTN
+BV,Bouvet Islands,NO,
+BW,Botswana,EN,BWP
+BY,Belarus,RU,BYR
+BZ,Belize,EN,BZD
+CA,Canada,EN,CAD
+CC,Coconut Islands,EN,
+CD,Democratic Republic of the Congo,FR,
+CF,Central African Republic,FR,CFP
+CG,Republic of the Congo,FR,
+CH,Switzerland,DE,CHF
+CI,Cote d'Ivoire,FR,
+CK,Cook Islands,EN,
+CL,Chile,ES,CLP
+CM,Cameroon,FR,
+CN,China,ZH,RMB
+CO,Colombia,ES,COP
+CR,Costa Rica,ES,CRC
+CS,Serbia and Montenegro,,
+CU,Cuba,ES,CUP
+CV,Cape Verde,PT,CVE
+CX,Christmas Islnd,EN,
+CY,Cyprus,EL,CYP
+CZ,Czech Republic,CS,CZK
+DE,Germany,DE,EUR
+DJ,Djibouti,AR,DJF
+DK,Denmark,DA,DKK
+DM,Dominica,EN,
+DO,Dominican Republic,ES,DOP
+DZ,Algeria,AR,DZD
+EC,Ecuador,ES,ECS
+EE,Estonia,RU,EEK
+EG,Egypt,AR,EGP
+EH,West Sahara,FR,EUR
+ER,Eritrea,AR,
+ES,Spain,ES,EUR
+ET,Ethiopia,EN,ETB
+EU,European Union,,
+FI,Finland,FI,EUR
+FJ,Fiji,EN,FJD
+FK,Falkland Islands,EN,FKP
+FM,Micronesia,EN,
+FO,Faroe Islands,DA,
+FR,France,FR,EUR
+GA,Gabon,FR,
+GB,United Kingdom,EN,GBP
+GD,Grenada,EN,
+GE,Georgia,,GEL
+GF,French Guyana,FR,
+GH,Ghana,EN,GHC
+GI,Gibraltar,EN,GIP
+GL,Greenland,DA,
+GM,Gambia,EN,GMD
+GN,Guinea,FR,GNF
+GP,Guadeloupe,FR,
+GQ,Equatorial Guinea,ES,
+GR,Greece,EL,GRD
+GS,South Georgia and the Southern Sandwich Islands,,
+GT,Guatemala,ES,GTQ
+GU,Guam,EN,
+GW,Guinea-Bissau,PT,GWP
+GY,Guyana,EN,GYD
+HK,Hong Kong,EN,HKD
+HM,Heard and McDonald Islands,EN,
+HN,Honduras,ES,HNL
+HR,Croatia,HR,HRK
+HT,Haiti,FR,HTG
+HU,Hungary,HU,HUF
+ID,Indonesia,,IDR
+IE,Ireland,EN,EUR
+IL,Israel,HE,ILS
+IN,India,EN,INR
+IO,British Indian Ocean Territory,EN,
+IQ,Iraq,AR,IQD
+IR,Iran,,IRR
+IS,Iceland,,ISK
+IT,Italy,IT,EUR
+JM,Jamaica,EN,JMD
+JO,Jordan,AR,JOD
+JP,Japan,JA,JPY
+KE,Kenya,EN,KES
+KG,Kyrgyzstan,RU,KGS
+KH,Cambodia,,KHR
+KI,Kiribati,EN,
+KM,Comoros,FR,KMF
+KN,Saint Kitts and Nevis,EN,
+KP,North Korea,KO,KPW
+KR,South Korea,KO,KRW
+KW,Kuwait,AR,KWD
+KY,Cayman Islands,EN,KYD
+KZ,Kazakhstan,RU,KZT
+LA,Laos,,LAK
+LB,Lebanon,AR,LBP
+LC,St. Lucia,EN,
+LI,Liechtenstein,DE,
+LK,Sri Lanka,,LKR
+LR,Liberia,EN,LRD
+LS,Lesotho,EN,LSL
+LT,Lithuania,RU,LTL
+LU,Luxembourg,FR,EUR
+LV,Latvia,,LVL
+LY,Libya,AR,LYD
+MA,Morocco,AR,MAD
+MC,Monaco,FR,
+MD,Moldova,RO,MDL
+MG,Madagascar,FR,MGF
+MH,Marshall Islands,EN,
+MK,Macedonia,,
+ML,Mali,FR,
+MM,Myanmar,,MNT
+MN,Mongolia,,MNT
+MO,Macau,PT,MOP
+MP,North Mariana Islands,EN,
+MQ,Martinique,FR,
+MR,Mauretania,AR,MRO
+MS,Montserrat,EN,
+MT,Malta,EN,MTL
+MU,Mauritius,EN,MUR
+MV,Maldives,EN,MVR
+MW,Malawi,EN,MWK
+MX,Mexico,ES,MXN
+MY,Malaysia,,MYR
+MZ,Mozambique,FR,MZM
+NA,Namibia,EN,NAD
+NC,New Caledonia,FR,
+NE,Niger,FR,
+NF,Norfolk Islands,EN,
+NG,Nigeria,EN,NGN
+NI,Nicaragua,ES,NIO
+NL,Netherlands,NL,EUR
+NO,Norway,NO,NOK
+NP,Nepal,,NPR
+NR,Nauru,EN,
+NT,NATO,,
+NU,Niue,EN,
+NZ,New Zealand,EN,NZD
+OM,Oman,AR,OMR
+OR,Orange,,
+PA,Panama,ES,PAB
+PE,Peru,ES,PEN
+PF,French Polynesia,FR,
+PG,Papua New Guinea,EN,PGK
+PH,Philippines,EN,PHP
+PK,Pakistan,,PKR
+PL,Poland,PL,PLN
+PM,St. Pierre and Miquelon,FR,
+PN,Pitcairn Islands,EN,
+PR,Puerto Rico,EN,
+PS,Palestine,AR,
+PT,Portugal,PT,EUR
+PW,Palau,EN,
+PY,Paraguay,ES,PYG
+QA,Qatar,AR,QAR
+RE,Reunion,FR,
+RO,Romania,RO,ROL
+RU,Russian Federation,RU,RUB
+RW,Rwanda,FR,RWF
+SA,Saudi Arabia,AR,SAR
+SB,Solomon Islands,EN,SBD
+SC,Seychelles,FR,SCR
+SD,Sudan,AR,SDP
+SE,Sweden,SV,SEK
+SG,Singapore,EN,SGD
+SH,Saint Helena,EN,SHP
+SI,Slovenia,SL,SIT
+SJ,Svalbard,NO,
+SK,Slovakia,SK,SKK
+SL,Sierra Leone,EN,SLL
+SM,San Marino,IT,
+SN,Senegal,FR,
+SO,Somalia,AR,SOS
+SR,Suriname,NL,SRG
+ST,Sao Tome and Principe,PT,STD
+SV,El Salvador,ES,SVC
+SY,Syria,AR,SYP
+SZ,Swaziland,EN,SZL
+TC,Turks and Caicos Islands,,
+TD,Chad,FR,
+TG,Togo,FR,
+TH,Thailand,TH,THB
+TJ,Tajikistan,RU,TJR
+TK,Tokelau Islands,EN,
+TL,East Timor,,
+TM,Turkmenistan,RU,TMM
+TN,Tunisia,AR,TND
+TO,Tonga,EN,TOP
+TP,East Timor,,TPE
+TR,Turkey,TR,TRL
+TT,Trinidad and Tobago,EN,TTD
+TV,Tuvalu,EN,
+TW,Taiwan,ZF,TWD
+TZ,Tanzania,EN,TZS
+UA,Ukraine,UK,UAH
+UG,Uganda,EN,UGX
+UM,American Minor Outlying Islands,EN,
+UN,United Nations,,
+US,USA,EN,USD
+UY,Uruguay,ES,UYU
+UZ,Uzbekistan,RU,
+VA,Vatican City,IT,
+VC,St. Vincent and the Grenadines,EN,
+VE,Venezuela,ES,VEB
+VG,British Virgin Islands,EN,
+VI,American Virgin Islands,EN,
+VN,Vietnam,,VND
+VU,Vanuatu,EN,VUV
+WF,Wallis and Futuna Islands,,
+WS,Samoa,EN,WST
+XK,Republic of Kosovo,,
+YE,Yemen,AR,YER
+YT,Mayotte,FR,
+ZA,South Africa,EN,ZAR
+ZM,Zambia,EN,ZMK
+ZW,Zimbabwe,EN,ZWD

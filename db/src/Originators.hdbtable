@@ -1,0 +1,9 @@
+----- Originators.hdbtable -----
+COLUMN TABLE "Originators" (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "originatorCode" NVARCHAR(20) NOT NULL,
+  "countryKey" NVARCHAR(3) NOT NULL,
+  "originatorName" NVARCHAR(100) NOT NULL,
+  "emailAddress" NVARCHAR(241),
+  PRIMARY KEY("clientId","originatorCode")
+)

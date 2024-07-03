@@ -1,0 +1,15 @@
+----- DocumentTemplates.hdbtable -----
+COLUMN TABLE "TemplateFields" (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "originatorCode" NVARCHAR(20) NOT NULL,
+  "documentTypeCode" NVARCHAR(4) NOT NULL,
+  "documentSubType" NVARCHAR(20) NOT NULL,
+  "countryKey" NVARCHAR(3) NOT NULL,
+  "fieldId" NVARCHAR(30) NOT NULL,
+  "description" NVARCHAR(100),
+  "fieldTemplate" NVARCHAR(5000),
+  "isLineItem" BOOLEAN default false,
+  "lastChangedOn" DATE,
+  "lastChangedBy" NVARCHAR(241),
+  PRIMARY KEY("clientId","originatorCode","documentTypeCode", "documentSubType","fieldId")
+)

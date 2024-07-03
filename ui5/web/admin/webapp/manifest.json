@@ -1,0 +1,158 @@
+{
+    "_version": "1.32.0",
+    "sap.app": {
+        "id": "ivl.optihub.admindashboard",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.109.3",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ivl.optihub.admindashboard.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [{
+                "uri": "css/style.css"
+            }]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "ivl.optihub.admindashboard.view",
+                "controlAggregation": "pages",
+                "controlId": "myPage"
+            },
+            "routes": [{
+                    "pattern": "",
+                    "name": "Base",
+                    "target": ["Dashboard"]
+                },
+                {
+                    "pattern": "Dashboard",
+                    "name": "Dashboard",
+                    "target": ["Dashboard"]
+                },
+                {
+                    "pattern": "Clients",
+                    "name": "Clients",
+                    "target": ["Clients"]
+                },
+                {
+                    "pattern": "SubscriptionPlans",
+                    "name": "SubscriptionPlans",
+                    "target": ["SubscriptionPlans"]
+                },
+                {
+                    "pattern": "SubscriptionService",
+                    "name": "SubscriptionService",
+                    "target": ["SubscriptionService"]
+                },
+                {
+                    "pattern": "Services",
+                    "name": "Services",
+                    "target": ["Services"]
+                }
+            ],
+            "targets": {
+                "Dashboard": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "viewId": "Dashboard",
+                    "viewName": "Dashboard",
+                    "controlAggregation": "pages"
+                },
+                "Clients": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "viewId": "Clients",
+                    "viewName": "Clients",
+                    "controlAggregation": "pages"
+                },
+                "SubscriptionPlans": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "viewId": "SubscriptionPlans",
+                    "viewName": "SubscriptionPlans",
+                    "controlAggregation": "pages"
+                },
+                "SubscriptionService": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "viewId": "SubscriptionService",
+                    "viewName": "SubscriptionService",
+                    "controlAggregation": "pages"
+                },
+                "Services": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "viewId": "Services",
+                    "viewName": "Services",
+                    "controlAggregation": "pages"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "ivl.optihub.admindashboard.view.Base",
+            "type": "XML",
+            "async": true,
+            "id": "Base"
+        }
+    }
+}

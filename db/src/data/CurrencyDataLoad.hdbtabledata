@@ -1,0 +1,21 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "Currency",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Currency.csv",
+                "has_header": true,
+                "delete_existing_foreign_data": true
+            },
+            "import_settings": {
+                "import_columns": [
+                    "currencyCode",
+                    "currencyLongText",
+                    "currencyShortText"
+                ]
+            }
+        }
+    ]
+}

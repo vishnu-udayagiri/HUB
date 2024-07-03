@@ -1,0 +1,155 @@
+{
+    "_version": "1.32.0",
+    "sap.app": {
+        "id": "com.ivl.optihub.ui5",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.102.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.ivl.optihub.ui5.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [{
+                "uri": "css/style.css"
+            }]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "com.ivl.optihub.ui5.view",
+                "controlAggregation": "pages",
+                "controlId": "rootContainer",
+                "clearControlAggregation": false
+            },
+            "routes": [{
+                    "pattern": "",
+                    "name": "login",
+                    "target": "login"
+                },
+                {
+                    "pattern": "dashboard",
+                    "name": "dashboard",
+                    "target": "dashboard"
+                },
+                {
+                    "pattern": "ExtractPDF",
+                    "name": "ExtractPDF",
+                    "target": "extractPDF"
+                },
+                {
+                    "pattern": "Trainer",
+                    "name": "Trainer",
+                    "target": "trainer"
+                },
+                {
+                    "pattern": "Validation",
+                    "name": "GSTValidation",
+                    "target": "GSTValidation"
+                },
+                {
+                    "pattern": "Shortner",
+                    "name": "URLShortner",
+                    "target": "URLShortner"
+                }
+            ],
+            "targets": {
+                "login": {
+                    "viewType": "XML",
+                    "transition": "fade",
+                    "clearControlAggregation": false,
+                    "viewId": "Login",
+                    "viewName": "Login"
+                },
+                "dashboard": {
+                    "viewType": "XML",
+                    "transition": "fade",
+                    "clearControlAggregation": false,
+                    "viewId": "Dashboard",
+                    "viewName": "Dashboard"
+                },
+                "extractPDF": {
+                    "viewType": "XML",
+                    "transition": "fade",
+                    "clearControlAggregation": false,
+                    "viewId": "ExtractPDF",
+                    "viewName": "ExtractPDF"
+                },
+                "trainer": {
+                    "viewType": "XML",
+                    "transition": "fade",
+                    "clearControlAggregation": false,
+                    "viewId": "Trainer",
+                    "viewName": "Trainer"
+                },
+                "GSTValidation": {
+                    "viewType": "XML",
+                    "transition": "fade",
+                    "clearControlAggregation": false,
+                    "viewId": "GSTValidation",
+                    "viewName": "GSTValidation"
+                },
+                "URLShortner": {
+                    "viewType": "XML",
+                    "transition": "fade",
+                    "clearControlAggregation": false,
+                    "viewId": "URLShortner",
+                    "viewName": "URLShortner"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "com.ivl.optihub.ui5.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    }
+}

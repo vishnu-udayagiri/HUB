@@ -1,0 +1,68 @@
+<mvc:View controllerName="com.ivl.optihub.ui5.controller.GSTValidation" class="sapUiSizeCompact"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page title="{i18n>txtGSTINValidation}">
+        <content>
+            <l:VerticalLayout id="containerLayout" width="100%" class="sapUiTinyMarginTop">
+                <l:BlockLayout id="BlockLayout" background="Dashboard">
+                    <l:BlockLayoutRow id="_IDGenBlockLayoutRow1" accentCells="Accent1">
+                        <l:BlockLayoutCell id="Accent1">
+                            <Label text="{i18n>txtEnterGSTIN}:" labelFor="input-c" />
+                            <FlexBox renderType="Bare">
+                                <Input id="IDInputValue" placeholder="{i18n>placeholderGSTIN}" class="sapUiSmallMarginEnd">
+                                    <layoutData>
+                                        <FlexItemData growFactor="3" />
+                                    </layoutData>
+                                </Input>
+                                <Button icon="sap-icon://validate" text="{i18n>txtValidate}" tooltip="{i18n>textValidateGSTIN}" press="onPressValidate"/>
+                            </FlexBox>
+                        </l:BlockLayoutCell>
+                    </l:BlockLayoutRow>
+
+                    <l:BlockLayoutRow id="_IDGenBlockLayoutRow3" accentCells="Accent2" visible="false">
+                        <l:BlockLayoutCell id="_IDGenBlockLayoutCell1" width="2">
+                            <f:SimpleForm id="gstDetailForm" editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+                                <f:content>
+                                    <Label text="GSTIN"/>
+                                    <Text text="{gstinValidationModel>/Gstin}" />
+                                    <Label text="Trade Name"/>
+                                    <Text text="{gstinValidationModel>/TradeName}" />
+                                    <Label text="Legal Name"/>
+                                    <Text text="{gstinValidationModel>/LegalName}" />
+                                    <Label text="Address Building name"/>
+                                    <Text text="{gstinValidationModel>/AddrBnm}" />
+                                    <Label text="Address Building No."/>
+                                    <Text text="{gstinValidationModel>/AddrBno}" />
+                                    <Label text="Address Floor No."/>
+                                    <Text text="{gstinValidationModel>/AddrFlno}" />
+                                    <Label text="Address Street"/>
+                                    <Text text="{gstinValidationModel>/AddrSt}" />
+                                    <Label text="AddressLocation"/>
+                                    <Text text="{gstinValidationModel>/AddrLoc}" />
+                                    <Label text="State"/>
+                                    <Text text="{gstinValidationModel>/StateCode} - {gstinValidationModel>/State}"/>
+                                    <Label text="Address Pincode"/>
+                                    <Text text="{gstinValidationModel>/AddrPncd}" />
+                                    <Label text="Tax Payer Type"/>
+                                    <Text text="{gstinValidationModel>/TxpTypeInfoText}" />
+                                    <Label text="Status"/>
+                                    <ObjectStatus text="{gstinValidationModel>/StatusInfoText}" state="{path: 'gstinValidationModel>/Status', formatter: '.setValidationStatusState'}" icon="{path: 'gstinValidationModel>/Status', formatter: '.setValidationStatusIcon'}"/>
+                                    <Label text="Block Status"/>
+                                    <ObjectStatus text="{gstinValidationModel>/BlkStatusInfoText}" state="{path: 'gstinValidationModel>/BlkStatus', formatter: '.setBlockedStatusState'}" icon="{path: 'gstinValidationModel>/BlkStatus', formatter: '.setBlockedStatusIcon'}"/>
+                                    <Label text="Date of Registration"/>
+                                    <Text text="{gstinValidationModel>/DtReg}" />
+                                    <Label text="De-Registration"/>
+                                    <Text text="{gstinValidationModel>/DtDReg}" />
+                                </f:content>
+                            </f:SimpleForm>
+                        </l:BlockLayoutCell>
+                    </l:BlockLayoutRow>
+                </l:BlockLayout>
+            </l:VerticalLayout>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,35 @@
+<mvc:View controllerName="com.ivl.optihub.ui5.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" displayBlock="true" class="sapUiSizeCompact" height="100%" busyIndicatorDelay="0"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <!-- <Shell > -->
+    <!-- <App id="app"> -->
+    <!-- <pages> -->
+    <!-- <Page> -->
+        <l:VerticalLayout id="_IDGenVerticalLayout1" width="100%" class="">
+            <l:Grid id="_IDGenGrid1" position="Center" class="gridWrapperBody">
+                <html:div class="loginBox">
+                    <html:div class="logoBox">
+                        <Image src="https://www.ivldsp.com/wp-content/uploads/2019/12/SAP-Addons-India-2.png" id="logoID" class="logo" width="300px" height="80px" />
+                    </html:div>
+                    <html:div class="formBox">
+                        <f:SimpleForm id="loginform" editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="1" emptySpanL="1" emptySpanM="1" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                            <f:content>
+                                <Label id="_IDGenLabel1" text="{i18n>Email}" design="Bold" />
+                                <Input id="email" type="Email" maxLength="241" />
+                                <Label id="_IDGenLabel2" text="{i18n>Password}" design="Bold" />
+                                <Input id="password" type="Password" maxLength="30" />
+                            </f:content>
+                            <Button text="{i18n>Login}" id="login1" type="Emphasized" press="onLogin" />
+                        </f:SimpleForm>
+                    </html:div>
+                </html:div>
+            </l:Grid>
+        </l:VerticalLayout>
+    <!-- </Page> -->
+    <!-- </pages> -->
+    <!-- </App> -->
+    <!-- </Shell> -->
+</mvc:View>

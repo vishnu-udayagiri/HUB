@@ -1,0 +1,7 @@
+----- Currency.hdbtable -----
+COLUMN TABLE "Currency" (
+  "currencyCode" NVARCHAR(5) NOT NULL,
+  "currencyLongText" NVARCHAR(40) NOT NULL,
+  "currencyShortText" NVARCHAR(15) NOT NULL,
+  PRIMARY KEY("currencyCode")
+)

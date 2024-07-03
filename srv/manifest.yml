@@ -1,0 +1,8 @@
+---
+applications:
+- name: apihub-dev-backend
+  path: .
+  buildpack: nodejs_buildpack
+  memory: 512M
+  disk_quota: 1024M
+  route: optihub-dev-backend.cfapps.eu10.hana.ondemand.com

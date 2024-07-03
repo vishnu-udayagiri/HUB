@@ -1,0 +1,13 @@
+----- DocumentTemplates.hdbtable -----
+COLUMN TABLE "DocumentTemplates" (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "originatorCode" NVARCHAR(20) NOT NULL,
+  "documentTypeCode" NVARCHAR(4) NOT NULL,
+  "documentSubType" NVARCHAR(20) NOT NULL,
+  "countryKey" NVARCHAR(3) NOT NULL,
+  "description" NVARCHAR(100),
+  "lastChangedOn" DATE,
+  "lastChangedBy" NVARCHAR(241),
+  "templateStatus" NVARCHAR(1),
+  PRIMARY KEY("clientId","originatorCode","documentTypeCode", "documentSubType")
+)

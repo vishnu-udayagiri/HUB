@@ -1,0 +1,9 @@
+----- HubUsers.hdbtable -----
+COLUMN TABLE "HubUsers" (
+  "userId" NVARCHAR(241) NOT NULL,
+  "clientId" NVARCHAR(36) NOT NULL,
+  "userName" NVARCHAR(40),
+  "password" NVARCHAR(80) NOT NULL,
+  "userRole" NVARCHAR(1),
+  PRIMARY KEY("userId")
+)

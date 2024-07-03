@@ -1,0 +1,89 @@
+<mvc:View controllerName="com.ivl.optihub.ui5.controller.URLShortner" class="sapUiSizeCompact"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:t="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Page title="{i18n>txtUrlShortner}">
+        <content>
+            <l:VerticalLayout id="containerLayout" width="100%" class="sapUiTinyMarginTop">
+                <l:BlockLayout id="BlockLayout" background="Dashboard">
+                    <l:BlockLayoutRow id="_IDGenBlockLayoutRow1" accentCells="Accent1">
+                        <l:BlockLayoutCell id="Accent1">
+                            <Label text="{i18n>appShortURL}:" labelFor="input-c" />
+                            <FlexBox renderType="Bare">
+                                <Input id="ID_longURL" placeholder="{i18n>placeholderShortURL}" class="sapUiSmallMarginEnd">
+                                    <layoutData>
+                                        <FlexItemData growFactor="3" />
+                                    </layoutData>
+                                </Input>
+                                <Button id="ID_execute" icon="sap-icon://chain-link" tooltip="{i18n>textShortenURL}" press="onCreateShortUrl"/>
+                            </FlexBox>
+                            <FlexBox renderType="Bare">
+                                <Input id="ID_shortURL" editable="false" class="sapUiSmallMarginEnd">
+                                    <layoutData>
+                                        <FlexItemData growFactor="3" />
+                                    </layoutData>
+                                </Input>
+                                <Button id="ID_copy" icon="sap-icon://copy" enabled="false" tooltip="{i18n>copyShortURL}L" press="onCopyUrl"/>
+                            </FlexBox>
+                        </l:BlockLayoutCell>
+                    </l:BlockLayoutRow>
+
+                    <l:BlockLayoutRow id="_IDGenBlockLayoutRow3" accentCells="Accent1" visible="true">
+                        <l:BlockLayoutCell id="_IDGenBlockLayoutCell1" width="2">
+                            <t:Table rows="{urlModel>/}" ariaLabelledBy="title" rowActionCount="1">
+                                <t:extension>
+                                    <OverflowToolbar style="Clear">
+                                        <Title id="title" text="{i18n>txtShortenedUrl}"/>
+                                    </OverflowToolbar>
+                                </t:extension>
+                                <t:columns>
+                                    <t:Column visible="false">
+                                        <Label text="{i18n>txtId}" />
+                                        <t:template>
+                                            <Text text="{urlModel>Id}"/>
+                                        </t:template>
+                                    </t:Column>
+                                    <t:Column>
+                                        <Label text="{i18n>txtLongUrl}" />
+                                        <t:template>
+                                            <Text text="{urlModel>longUrl}"/>
+                                        </t:template>
+                                    </t:Column>
+                                    <t:Column width="20rem">
+                                        <Label text="{i18n>txtShortUrl}" />
+                                        <t:template>
+                                            <Text text="{urlModel>shortUrl}" wrapping="false" />
+                                        </t:template>
+                                    </t:Column>
+                                    <t:Column width="4rem" hAlign="Center">
+                                        <Label text="" />
+                                        <t:template>
+                                            <Button icon="sap-icon://copy" press="onCopyShortUrl"/>
+                                        </t:template>
+                                    </t:Column>
+                                    <t:Column width="7rem" hAlign="Center">
+                                        <Label text="{i18n>txtActive}" />
+                                        <t:template>
+                                            <Switch state="{urlModel>active}" change="onChangeState" customTextOn="{i18n>txtYes}" customTextOff="{i18n>txtNo}"/>
+                                        </t:template>
+                                    </t:Column>
+                                </t:columns>
+                                <t:rowActionTemplate>
+                                    <t:RowAction>
+                                        <t:items>
+                                            <t:RowActionItem type="Delete" press="onDeleteField" icon="sap-icon://delete" />
+                                        </t:items>
+                                    </t:RowAction>
+                                </t:rowActionTemplate>
+                            </t:Table>
+                        </l:BlockLayoutCell>
+                    </l:BlockLayoutRow>
+                </l:BlockLayout>
+            </l:VerticalLayout>
+        </content>
+    </Page>
+</mvc:View>

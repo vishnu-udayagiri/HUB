@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Dialog id="_IDGenDialog1" contentWidth="30rem" title="User Information" titleAlignment="Center" afterClose="_handleDialogAfterClose">
+        <content>
+            <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormChange354" layout="ColumnLayout">
+                    <f:content>
+                        <Label id="_IDGenLabel1" text="Name" />
+                        <Text id="_IDGenInput1" text="{clientDetailsModel>/userName}"/>
+                        <Label id="_IDGenLabel2" text="E-Mail" />
+                        <Text id="_IDGenInput2" text="{clientDetailsModel>/userEmail}"/>
+                        <Label id="_IDGenLabel3" text="Country" />
+                        <Text id="_IDGenInput3" text="{clientDetailsModel>/countryKey}" />
+                        <Label id="_IDGenLabel5" text="Client Id" />
+                        <Text id="clientID" text="{clientDetailsModel>/clientId}"/>
+                        <Label id="_IDGenLabel4" text="Client Secret" />
+                        <Text id="token" text="{clientDetailsModel>/clientSecret}"/>
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+        </content>
+        <buttons>
+            <Button id="_IDGenButton4" type="Emphasized" icon="sap-icon://copy" press="onCopyToken" tooltip="Copy Client Secrret" />
+            <Button id="_IDGenButton5" type="Emphasized" icon="sap-icon://synchronize" press="onRefreshToken" tooltip="Refresh Client Secrret" />
+            <Button id="_IDGenButton3" text="Close" type="Reject" press="_handleDialogClose" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

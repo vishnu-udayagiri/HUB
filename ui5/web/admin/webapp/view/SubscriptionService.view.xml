@@ -1,0 +1,148 @@
+<mvc:View xmlns="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc" controllerName="ivl.optihub.admindashboard.controller.SubscriptionService"
+    xmlns:t="sap.ui.table" class="sapUiSizeCompact" height="100%">
+    <m:App id="app">
+        <m:pages>
+            <m:Page id="_IDGenPage1" showHeader="false" floatingFooter="true">
+                <m:content>
+                    <ObjectPageLayout id="ObjectPageLayout" showFooter="true" upperCaseAnchorBar="false" showHeaderContent="false">
+                        <sections>
+                            <!-- Create Subscription Service -->
+                            <ObjectPageSection title="{i18n>ttlCreateSubscriptionService}" showTitle="false" id="ID_CreateSection" titleUppercase="false">
+                                <subSections>
+                                    <ObjectPageSubSection>
+                                        <m:Panel>
+                                            <m:headerToolbar>
+                                                <m:OverflowToolbar>
+                                                    <m:Title id="ID_TitleSubService" text="{i18n>ttlCreateSubscriptionService}"></m:Title>
+                                                    <m:ToolbarSpacer />
+                                                    <m:Button id="ID_CreateSubService" press="onCreateSubService" text="{i18n>btnTxtCreate}" icon="sap-icon://create" visible="{= !${/toggleEdit}}"/>
+                                                    <!-- Edit Press -->
+                                                    <m:Button id="ID_SaveSubService" press="onCreateSubService" text="{i18n>btnTxtSave}" icon="sap-icon://save" visible="{= ${/toggleEdit}}"/>
+                                                    <m:Button id="ID_CancelSubService" press="onCancelEditSubService" text="{i18n>btnTxtCancel}" icon="sap-icon://cancel" type="Reject" visible="{= ${/toggleEdit}}"/>
+
+                                                </m:OverflowToolbar>
+                                            </m:headerToolbar>
+                                            <m:content>
+                                                <form:SimpleForm layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+                                                    <form:content>
+
+                                                        <m:Label text="{i18n>txtSubscriptionPlanDesc}" />
+                                                        <m:ComboBox id="ID_SubscriptionPlanId" width="100%" required="true" editable="{= !${/toggleEdit}}" selectedKey="{newSubServiceModel>/subscriptionPlanId}" items="{subscriptionServiceModel>/subscriptionPlansList}">
+                                                            <core:Item key="{subscriptionServiceModel>subscriptionPlanId}" text="{subscriptionServiceModel>subscriptionPlanDesc}"/>
+                                                        </m:ComboBox>
+
+                                                        <m:Label text="{i18n>txtServiceId}"/>
+                                                        <m:ComboBox id="ID_ServiceId" width="100%" required="true" editable="{= !${/toggleEdit}}" selectedKey="{newSubServiceModel>/serviceId}" items="{subscriptionServiceModel>/servicesList}">
+                                                            <core:Item key="{subscriptionServiceModel>serviceId}" text="{subscriptionServiceModel>serviceDesc}"/>
+                                                        </m:ComboBox>
+
+                                                        <m:Label text="{i18n>txtCurrency}" required="true"/>
+                                                        <m:ComboBox id="ID_Currency" width="100%" selectedKey="{newSubServiceModel>/currency}" items="{currencyMasterModel>/}">
+                                                            <core:Item key="{currencyMasterModel>currencyCode}" text="{currencyMasterModel>currencyLongText}"/>
+                                                        </m:ComboBox>
+
+                                                        <m:Label text="{i18n>txtRateType}" required="true"/>
+                                                        <m:ComboBox id="ID_RateType" width="100%" selectedKey="{newSubServiceModel>/rateType}" items="{subscriptionServiceModel>/rateType}">
+                                                            <core:Item key="{subscriptionServiceModel>rateType}" text="{subscriptionServiceModel>rateDesc}"/>
+                                                        </m:ComboBox>
+
+                                                        <m:Label text="{i18n>txtRateAmount}" required="true"/>
+                                                        <m:Input id="ID_RateAmount" value="{newSubServiceModel>/rateAmount}" type="Number" maxLength="14"/>
+
+                                                        <m:Label text="{i18n>txtPeriodType}"/>
+                                                        <m:ComboBox id="ID_PeriodType" width="100%" selectedKey="{newSubServiceModel>/periodType}" items="{subscriptionServiceModel>/periodType}">
+                                                            <core:Item key="{subscriptionServiceModel>periodType}" text="{subscriptionServiceModel>periodDesc}"/>
+                                                        </m:ComboBox>
+
+                                                        <m:Label/>
+                                                        <m:CheckBox id="ID_IsActive" text="{i18n>txtIsActive}" selected="{newSubServiceModel>/isActive}" class="sapUiSmallMarginTop"/>
+                                                    </form:content>
+                                                </form:SimpleForm>
+                                            </m:content>
+                                        </m:Panel>
+                                    </ObjectPageSubSection>
+                                </subSections>
+                            </ObjectPageSection>
+                            <!-- Subscription Service List -->
+                            <ObjectPageSection title="{i18n>ttlSubscriptionService}" showTitle="false" id="listSection" titleUppercase="false">
+                                <subSections>
+                                    <ObjectPageSubSection >
+                                        <m:Panel>
+                                            <m:headerToolbar>
+                                                <m:OverflowToolbar>
+                                                    <m:Title text="{i18n>ttlSubscriptionService}"></m:Title>
+                                                    <m:ToolbarSpacer />
+                                                    <!-- <m:Button text="{i18n>btnTxtCreate}" icon="sap-icon://create"/> -->
+                                                </m:OverflowToolbar>
+                                            </m:headerToolbar>
+                                            <m:content>
+                                                <t:Table rowActionCount="2" rows="{subscriptionServiceListModel>/}" enableColumnReordering="false" selectionMode="Single" id="ID_SubscriptionServiceList">
+                                                    <t:columns>
+                                                        <t:Column filterProperty="subscriptionPlanId">
+                                                            <m:Label text="{i18n>txtSubscriptionPlanDesc}"/>
+                                                            <t:template>
+                                                                <m:Text text="{path: 'subscriptionServiceListModel>subscriptionPlanId', formatter: '.setSubscriptionPlanName'}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column filterProperty="serviceId">
+                                                            <m:Label text="{i18n>txtServiceId}"/>
+                                                            <t:template>
+                                                                    <m:Text text="{path: 'subscriptionServiceListModel>serviceId', formatter: '.setServiceName'}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column>
+                                                            <m:Label text="{i18n>txtCurrency}"/>
+                                                            <t:template>
+                                                                <m:Text text="{path: 'subscriptionServiceListModel>currency', formatter: '.setCurrencyName'}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column width="8rem">
+                                                            <m:Label text="{i18n>txtRateType}"/>
+                                                            <t:template>
+                                                                <m:Text text="{path: 'subscriptionServiceListModel>rateType', formatter: '.setRateName'}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column width="8rem">
+                                                            <m:Label text="{i18n>txtRateAmount}"/>
+                                                            <t:template>
+                                                                <m:Text text="{subscriptionServiceListModel>rateAmount}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column width="8rem">
+                                                            <m:Label text="{i18n>txtPeriodType}"/>
+                                                            <t:template>
+                                                                <m:Text text="{path: 'subscriptionServiceListModel>periodType', formatter: '.setPeriodName'}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column width="5rem">
+                                                            <m:Label text="{i18n>txtIsActive}"/>
+                                                            <t:template>
+                                                                <m:CheckBox selected="{subscriptionServiceListModel>isActive}" editable="false"/>
+                                                            </t:template>
+                                                        </t:Column>
+                                                    </t:columns>
+                                                    <t:rowActionTemplate>
+                                                        <t:RowAction>
+                                                            <t:items>
+                                                                <t:RowActionItem icon="sap-icon://edit" press="onSubscriptionServiceEditPress"/>
+                                                                <t:RowActionItem type="Delete" icon="sap-icon://delete" press="onSubscriptionServiceDeletePress"/>
+                                                            </t:items>
+                                                        </t:RowAction>
+                                                    </t:rowActionTemplate>
+                                                </t:Table>
+                                            </m:content>
+                                        </m:Panel>
+                                    </ObjectPageSubSection>
+                                </subSections>
+                            </ObjectPageSection>
+                        </sections>
+                    </ObjectPageLayout>
+                </m:content>
+            </m:Page>
+        </m:pages>
+    </m:App>
+</mvc:View>

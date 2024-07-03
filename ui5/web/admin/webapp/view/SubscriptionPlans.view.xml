@@ -1,0 +1,135 @@
+<mvc:View xmlns="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc" controllerName="ivl.optihub.admindashboard.controller.SubscriptionPlans"
+    xmlns:t="sap.ui.table" class="sapUiSizeCompact" height="100%">
+    <m:App id="app">
+        <m:pages>
+            <m:Page id="_IDGenPage1" showHeader="false" floatingFooter="true">
+                <m:content>
+                    <ObjectPageLayout id="ObjectPageLayout" showFooter="true" upperCaseAnchorBar="false" showHeaderContent="false">
+                        <sections>
+                            <!-- Create Subscription Plan -->
+                            <ObjectPageSection title="{i18n>ttlCreateSubscriptionPlan}" showTitle="false" id="ID_CreateSection" titleUppercase="false">
+                                <subSections>
+                                    <ObjectPageSubSection>
+                                        <m:Panel>
+                                            <m:headerToolbar>
+                                                <m:OverflowToolbar>
+                                                    <m:Title id="ID_TitleSubPlans" text="{i18n>ttlCreateSubscriptionPlan}"></m:Title>
+                                                    <m:ToolbarSpacer />
+                                                    <m:Button id="ID_CreateSubPlan" press="onCreateSubPlan" text="{i18n>btnTxtCreate}" icon="sap-icon://create" visible="{= !${/toggleEdit}}"/>
+                                                    <!-- Edit Press -->
+                                                    <m:Button id="ID_SaveSubPlan" press="onCreateSubPlan" text="{i18n>btnTxtSave}" icon="sap-icon://save" visible="{= ${/toggleEdit}}"/>
+                                                    <m:Button id="ID_CancelSubPlan" press="onCancelEditSubPlan" text="{i18n>btnTxtCancel}" icon="sap-icon://cancel" type="Reject" visible="{= ${/toggleEdit}}"/>
+
+                                                </m:OverflowToolbar>
+                                            </m:headerToolbar>
+                                            <m:content>
+                                                <form:SimpleForm layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+                                                    <form:content>
+                                                        <!-- <m:Label text="{i18n>txtSubscriptionPlanId}"/>
+                                                        <m:Input value="{newSubPlansModel>/subscriptionPlanId}"/> -->
+                                                        <m:Label text="{i18n>txtSubscriptionPlanDesc}" required="true"/>
+                                                        <m:Input id="ID_SubscriptionPlanDesc" value="{newSubPlansModel>/subscriptionPlanDesc}"/>
+                                                        <m:Label text="{i18n>txtCountryKey}" required="true"/>
+                                                        <m:ComboBox id="ID_CountryKey" width="100%" selectedKey="{newSubPlansModel>/countryKey}" items="{countryMasterModel>/}">
+                                                            <core:Item key="{countryMasterModel>countryKey}" text="{countryMasterModel>countryName}"/>
+                                                        </m:ComboBox>
+                                                        <m:Label text="{i18n>txtCurrency}" required="true"/>
+                                                        <m:ComboBox id="ID_Currency" width="100%" selectedKey="{newSubPlansModel>/currency}" items="{currencyMasterModel>/}">
+                                                            <core:Item key="{currencyMasterModel>currencyCode}" text="{currencyMasterModel>currencyLongText}"/>
+                                                        </m:ComboBox>
+                                                        <m:Label text="{i18n>txtDuration}"/>
+                                                        <m:Input id="ID_Duration" value="{newSubPlansModel>/duration}" type="Number"/>
+                                                        <m:Label/>
+                                                        <m:CheckBox id="ID_IsTrial" text="{i18n>txtIsTrial}" selected="{newSubPlansModel>/isTrial}" class="sapUiSmallMarginTop"/>
+                                                        <m:Label/>
+                                                        <m:CheckBox id="ID_IsActive" text="{i18n>txtIsActive}" selected="{newSubPlansModel>/isActive}" class="sapUiSmallMarginTop"/>
+                                                    </form:content>
+                                                </form:SimpleForm>
+                                            </m:content>
+                                        </m:Panel>
+                                    </ObjectPageSubSection>
+                                </subSections>
+                            </ObjectPageSection>
+                            <!-- Subscription Plan List -->
+                            <ObjectPageSection title="{i18n>ttlSubscriptionPlans}" showTitle="false" id="listSection" titleUppercase="false">
+                                <subSections>
+                                    <ObjectPageSubSection >
+                                        <m:Panel>
+                                            <m:headerToolbar>
+                                                <m:OverflowToolbar>
+                                                    <m:Title text="{i18n>ttlSubscriptionPlans}"></m:Title>
+                                                    <m:ToolbarSpacer />
+                                                    <!-- <m:Button text="{i18n>btnTxtCreate}" icon="sap-icon://create"/> -->
+                                                </m:OverflowToolbar>
+                                            </m:headerToolbar>
+                                            <m:content>
+                                                <t:Table rowActionCount="2" rows="{subscriptionPlanListModel>/}" enableColumnReordering="false" selectionMode="Single" id="ID_SubscriptionPlanList">
+                                                    <t:columns>
+                                                        <t:Column width="5rem" visible="false">
+                                                            <m:Label text="{i18n>txtSubscriptionPlanId}"/>
+                                                            <t:template>
+                                                                <m:Text text="{subscriptionPlanListModel>subscriptionPlanId}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column filterProperty="subscriptionPlanDesc">
+                                                            <m:Label text="{i18n>txtSubscriptionPlanDesc}"/>
+                                                            <t:template>
+                                                                <m:Text text="{subscriptionPlanListModel>subscriptionPlanDesc}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column filterProperty="countryKey">
+                                                            <m:Label text="{i18n>txtCountryKey}"/>
+                                                            <t:template>
+                                                                <m:Text text="{path: 'subscriptionPlanListModel>countryKey', formatter: '.setCountryName'}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column>
+                                                            <m:Label text="{i18n>txtCurrency}"/>
+                                                            <t:template>
+                                                                <m:Text text="{path: 'subscriptionPlanListModel>currency', formatter: '.setCurrencyName'}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column width="8rem">
+                                                            <m:Label text="{i18n>txtDuration}"/>
+                                                            <t:template>
+                                                                <m:Text text="{subscriptionPlanListModel>duration}" />
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column width="5rem">
+                                                            <m:Label text="{i18n>txtIsTrial}"/>
+                                                            <t:template>
+                                                                <m:CheckBox selected="{subscriptionPlanListModel>isTrial}" editable="false"/>
+                                                            </t:template>
+                                                        </t:Column>
+                                                        <t:Column width="5rem">
+                                                            <m:Label text="{i18n>txtIsActive}"/>
+                                                            <t:template>
+                                                                <m:CheckBox selected="{subscriptionPlanListModel>isActive}" editable="false"/>
+                                                            </t:template>
+                                                        </t:Column>
+                                                    </t:columns>
+                                                    <t:rowActionTemplate>
+                                                        <t:RowAction>
+                                                            <t:items>
+                                                                <t:RowActionItem icon="sap-icon://edit" press="onSubscriptionPlanEditPress"/>
+                                                                <t:RowActionItem type="Delete" icon="sap-icon://delete" press="onSubscriptionPlanDeletePress"/>
+                                                            </t:items>
+                                                        </t:RowAction>
+                                                    </t:rowActionTemplate>
+                                                </t:Table>
+                                            </m:content>
+                                        </m:Panel>
+                                    </ObjectPageSubSection>
+                                </subSections>
+                            </ObjectPageSection>
+                        </sections>
+                    </ObjectPageLayout>
+                </m:content>
+            </m:Page>
+        </m:pages>
+    </m:App>
+</mvc:View>

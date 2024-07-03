@@ -1,0 +1,13 @@
+----- ClientServiceUsage.hdbtable -----
+COLUMN TABLE "ClientServiceUsage" (
+  "usageId" NVARCHAR(36) NOT NULL,
+  "clientId" NVARCHAR(36) NOT NULL,
+  "subscriptionPlanId" NVARCHAR(36) NOT NULL,
+  "serviceId" NVARCHAR(20) NOT NULL,
+  "billDate" TIMESTAMP,
+  "usageDate" TIMESTAMP,
+  "currency" NVARCHAR(5) ,
+  "usageAmount" DECIMAL(14, 3),
+  PRIMARY KEY("usageId")
+)
+

@@ -1,0 +1,7 @@
+----- ServiceFixedCharge.hdbtable -----
+COLUMN TABLE "ServiceFixedCharge" (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "serviceId" NVARCHAR(20) NOT NULL,
+  "fixedUsageCharge" DECIMAL(14, 3) NOT NULL,
+  PRIMARY KEY("clientId", "serviceId")
+)

@@ -1,0 +1,9 @@
+<mvc:View controllerName="ivl.optihub.admindashboard.controller.Dashboard" class="sapUiSizeCompact"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" height="100%">
+    <App id="app">
+        <Page title="Dashboard">
+            <IllustratedMessage id="illusMsg" visible="true" title="Dashboard" illustrationType="sapIllus-NoEntries" description="comimg soon.." />
+        </Page>
+    </App>
+</mvc:View>

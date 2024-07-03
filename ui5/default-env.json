@@ -1,0 +1,66 @@
+{
+    "VCAP_SERVICES": {
+        "xsuaa": [
+            {
+                "binding_guid": "b4c0eaa3-2266-447d-af38-9547576fd320",
+                "binding_name": null,
+                "credentials": {
+                    "apiurl": "https://api.authentication.eu10.hana.ondemand.com",
+                    "clientid": "sb-optihub-dev!t91161",
+                    "clientsecret": "BPACU6hKrZZBlGm91ofZzCQT6EM=",
+                    "credential-type": "instance-secret",
+                    "identityzone": "optivms",
+                    "identityzoneid": "14ea12a5-4010-407f-8ebf-5121cfac7a81",
+                    "sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+                    "subaccountid": "14ea12a5-4010-407f-8ebf-5121cfac7a81",
+                    "tenantid": "14ea12a5-4010-407f-8ebf-5121cfac7a81",
+                    "tenantmode": "dedicated",
+                    "uaadomain": "authentication.eu10.hana.ondemand.com",
+                    "url": "https://optivms.authentication.eu10.hana.ondemand.com",
+                    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzQwOg/zRzTk1MN2425VD\nHsBB37UibtKLfbVp/BWZ19bMxWMDC+NGoQdmmWA621g2uNAbdV+h7Cr22ke9Jy4N\nSRX0eqqhaMquJAHn/1+I7+3dywV3Az2flwvX/SxImcOP5vldO/9nWYDbnZmQeJ7O\n+avKaxy0fE3xP+NDonG1U8mluwfmgz2YraQpQwvrXb6b7lpikGjub6PTDXu2wiyP\nXXQEsmQ6hg6wCOSg/PCJr0inawrmkvwlDmXBHELF2gOtZtX7a30APOHFb43T9V7E\nQ33UsPUwVLKQRNRlDqb8M77FHTuPcE3NYvDLGZ+cimKNqNQwUaxAK+0QHY5+iCC8\n0QIDAQAB\n-----END PUBLIC KEY-----",
+                    "xsappname": "optihub-dev!t91161",
+                    "zoneid": "14ea12a5-4010-407f-8ebf-5121cfac7a81"
+                },
+                "instance_guid": "27a26393-cd6d-4cbe-89ba-08004701f336",
+                "instance_name": "optihub-uaa",
+                "label": "xsuaa",
+                "name": "optihub-uaa",
+                "plan": "application",
+                "provider": null,
+                "syslog_drain_url": null,
+                "tags": [
+                    "xsuaa"
+                ],
+                "volume_mounts": []
+            }
+        ]
+    },
+    "VCAP_APPLICATION": {
+        "application_id": "f7c2fdee-0c84-4780-a426-f5a94f18bc33",
+        "application_name": "optihub-app",
+        "application_uris": [
+            "optivms-dev-optihub-app.cfapps.eu10.hana.ondemand.com"
+        ],
+        "application_version": "51dbd5f3-e459-48da-a0a5-04b02c8de0b6",
+        "cf_api": "https://api.cf.eu10.hana.ondemand.com",
+        "limits": {
+            "disk": 1024,
+            "fds": 32768,
+            "mem": 256
+        },
+        "name": "optihub-app",
+        "organization_id": "a7d6501d-0002-4635-96b0-80b76d14ec82",
+        "organization_name": "optivms",
+        "process_id": "f7c2fdee-0c84-4780-a426-f5a94f18bc33",
+        "process_type": "web",
+        "space_id": "c03f5764-d8c9-4d52-bdb9-eb9e17a0868d",
+        "space_name": "dev",
+        "uris": [
+            "optivms-dev-optihub-app.cfapps.eu10.hana.ondemand.com"
+        ],
+        "users": null,
+        "version": "51dbd5f3-e459-48da-a0a5-04b02c8de0b6"
+    },
+    "DEPLOY_ATTRIBUTES": "{\n  \"app-content-digest\" : \"B52CAF3CBC17414A9127C8A92FDD477E\"\n}",
+    "destinations": "[ {\n  \"name\" : \"hub\",\n  \"timeout\" : 600000,\n  \"url\" : \"http://localhost:4004\"\n}, {\n  \"forwardAuthToken\" : true,\n  \"name\" : \"admin\",\n  \"timeout\" : 600000,\n  \"url\" : \"http://localhost:4004\"\n} ]"
+}

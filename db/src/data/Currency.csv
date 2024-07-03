@@ -1,0 +1,196 @@
+currencyCode,currencyLongText,currencyShortText
+ADP,Andoran peseta,Peseta
+AED,United Arab Emirates Dirham,Dirham
+AFA,Afghani (Old),Afghani
+AFN,Afghani,Afghani
+ALL,Albanian Lek,Lek
+AMD,Armenian Dram,Dram
+ANG,West Indian Guilder,W.Ind.Guilder
+AOA,Angolanische Kwanza,Kwansa
+AON,Angolan New Kwanza (Old),New Kwanza
+AOR,Angolan Kwanza Reajustado (Old),Kwanza Reajust.
+ARS,Argentine Peso,Arg. Peso
+ATS,Austrian Schilling,Shilling
+AUD,Australian Dollar,Austr. Dollar
+AWG,Aruban Guilder,Aruban Guilder
+AZM,Azerbaijan Manat,Manat
+BAM,Bosnia and Herzegovina Convertible Mark,Convert. Mark
+BBD,Barbados Dollar,Dollar
+BDT,Bangladesh Taka,Taka
+BEF,Belgian Franc,Belgian Franc
+BGN,Bulgarian Lev,Lev
+BHD,Bahrain Dinar,Dinar
+BIF,Burundi Franc,Burundi Franc
+BMD,Bermudan Dollar,Bermudan Dollar
+BND,Brunei Dollar,Dollar
+BOB,Boliviano,Boliviano
+BRL,Brazilian Real,Real
+BSD,Bahaman Dollar,Dollar
+BTN,Bhutan Ngultrum,Ngultrum
+BWP,Botswana Pula,Pula
+BYB,Belorussian Ruble (Old),Beloruss.Ruble
+BYR,Belorussian Ruble,Ruble
+BZD,Belize Dollar,Dollar
+CAD,Canadian Dollar,Canadian Dollar
+CDF,Congolese Franc,test data
+CFP,French Franc (Pacific Islands),Fr. Frank (Pac)
+CHF,Swiss Franc,Swiss Franc
+CLP,Chilean Peso,Peso
+CNY,Chinesische Yuan (international),Yuan
+COP,Colombian Peso,Peso
+CRC,Costa Rica Colon,Cost.Rica Colon
+CSD,Serbian Dinar,Serbian Dinar
+CUP,Cuban Peso,Cuban Peso
+CVE,Cape Verde Escudo,Escudo
+CYP,Cyprus Pound,Cyprus Pound
+CZK,Czech Krona,Krona
+DEM,German Mark,German Mark
+DEM3,(Internal) German Mark (3 dec.places),(Int.) DEM 3 DP
+DJF,Djibouti Franc,Djibouti Franc
+DKK,Danish Krone,Danish Krone
+DOP,Dominican Peso,Dominican Peso
+DZD,Algerian Dinar,Dinar
+ECS,Ecuadorian Sucre ( > USD),Sucre
+EEK,Estonian Krone,Krona
+EGP,Egyptian Pound,Pound
+ERN,Eritrean Nafka,Nakfa
+ESP,Spanish Peseta,Peseta
+ETB,Ethiopian Birr,Birr
+EUR,European Euro,Euro
+FIM,Finnish markka,Finnish markka
+FJD,Fiji Dollar,Dollar
+FKP,Falkland Pound,Falkland Pound
+FRF,French Franc,French Franc
+GBP,British Pound,Pound sterling
+GEL,Georgian Lari,Lari
+GHC,Ghanian Cedi,Cedi
+GIP,Gibraltar Pound,Gibraltar Pound
+GMD,Gambian Dalasi,Dalasi
+GNF,Guinean Franc,Franc
+GRD,Greek Drachma,Drachma
+GTQ,Guatemalan Quetzal,Quetzal
+GWP,Guinea Peso,Guinea Peso
+GYD,Guyana Dollar,Guyana Dollar
+HKD,Hong Kong Dollar,H.K.Dollar
+HNL,Honduran Lempira,Lempira
+HRK,Croatian Kuna,Kuna
+HTG,Haitian Gourde,Gourde
+HUF,Hungarian Forint,Forint
+IDR,Indonesian Rupiah,Rupiah
+IEP,Irish Punt,Irish Punt
+ILS,Israeli Scheckel,Scheckel
+INR,Indian Rupee,Rupee
+IQD,Iraqui Dinar,Dinar
+IRR,Iranian Rial,Rial
+ISK,Iceland Krona,Krona
+ITL,Italian Lira,Lire
+JMD,Jamaican Dollar,Jamaican Dollar
+JOD,Jordanian Dinar,Jordanian Dinar
+JPY,Japanese Yen,Yen
+KES,Kenyan Shilling,Shilling
+KGS,Kyrgyzstan Som,Som
+KHR,Cambodian Riel,Riel
+KMF,Comoros Franc,Comoros Franc
+KPW,North Korean Won,N. Korean Won
+KRW,South Korean Won,S.Korean Won
+KWD,Kuwaiti Dinar,Dinar
+KYD,Cayman Dollar,Cayman Dollar
+KZT,Kazakstanian Tenge,Tenge
+LAK,Laotian Kip,Kip
+LBP,Lebanese Pound,Lebanese Pound
+LKR,Sri Lankan Rupee,Sri Lanka Rupee
+LRD,Liberian Dollar,Liberian Dollar
+LSL,Lesotho Loti,Loti
+LTL,Lithuanian Lita,Lita
+LUF,Luxembourg Franc,Lux. Franc
+LVL,Latvian Lat,Lat
+LYD,Libyan Dinar,Libyan Dinar
+MAD,Moroccan Dirham,Dirham
+MDL,Moldavian Leu,Leu
+MGA,Madagascan Ariary (New),Madagasc.Ariary
+MGF,Madagascan Franc (Old,Madagascan Fr.
+MKD,Macedonian Denar,Maced. Denar
+MMK,Myanmar Kyat,Kyat
+MNT,Mongolian Tugrik,Tugrik
+MOP,Macao Pataca,Pataca
+MRO,Mauritanian Ouguiya,Ouguiya
+MTL,Maltese Lira,Lira
+MUR,Mauritian Rupee,Rupee
+MVR,Maldive Rufiyaa,Rufiyaa
+MWK,Malawi Kwacha,Malawi Kwacha
+MXN,Mexican Pesos,Peso
+MYR,Malaysian Ringgit,Ringgit
+MZM,Mozambique Metical,Metical
+NAD,Namibian Dollar,Namibian Dollar
+NGN,Nigerian Naira,Naira
+NIO,Nicaraguan Cordoba Oro,Cordoba Oro
+NLG,Dutch Guilder,Guilder
+NOK,Norwegian Krone,Norwegian Krone
+NPR,Nepalese Rupee,Rupee
+NZD,New Zealand Dollars,N.Zeal.Dollars
+OMR,Omani Rial,Omani Rial
+PAB,Panamanian Balboa,Balboa
+PEN,Peruvian New Sol,New Sol
+PGK,Papua New Guinea Kina,Kina
+PHP,Philippine Peso,Peso
+PKR,Pakistani Rupee,Rupee
+PLN,Polish Zloty (new),Zloty
+PTE,Portuguese Escudo,Escudo
+PYG,Paraguayan Guarani,Guarani
+QAR,Qatar Rial,Rial
+RMB,Chinesische Renminbi (national),Renminbi
+ROL,Romanian Leu,Leu
+RUB,Russian Ruble,Ruble
+RWF,Rwandan Franc,Franc
+SAR,Saudi Riyal,Rial
+SBD,Solomon Islands Dollar,Sol.Isl.Dollar
+SCR,Seychelles Rupee,Rupee
+SDD,Sudanese Dinar,Dinar
+SDP,Sudanese Pound,Pound
+SEK,Swedish Krona,Swedish Krona
+SGD,Singapore Dollar,Sing.Dollar
+SHP,St.Helena Pound,St.Helena Pound
+SIT,Slovenian Tolar,Tolar
+SKK,Slovakian Krona,Krona
+SLL,Sierra Leone Leone,Leone
+SOS,Somalian Shilling,Shilling
+SRD,Surinam Dollar,Surinam Doillar
+SRG,Surinam Guilder (Old),Surinam Guilder
+STD,Sao Tome / Principe Dobra,Dobra
+SVC,El Salvador Colon,Colon
+SYP,Syrian Pound,Syrian Pound
+SZL,Swaziland Lilangeni,Lilangeni
+THB,Thailand Baht,Baht
+TJR,Tajikistani Ruble (Old),Ruble
+TJS,Tajikistani Somoni,Somoni
+TMM,Turkmenistani Manat,Manat
+TND,Tunisian Dinar,Dinar
+TOP,Tongan Pa'anga,Pa'anga
+TPE,Timor Escudo,Timor Escudo
+TRL,Turkish Lira (Old),Lira (Old)
+TRY,Turkish Lira,Lira
+TTD,Trinidad and Tobago Dollar,T.+ T. Dollar
+TWD,New Taiwan Dollar,Dollar
+TZS,Tanzanian Shilling,Shilling
+UAH,Ukraine Hryvnia,Hryvnia
+UGX,Ugandan Shilling,Shilling
+US$,United States Dollar - 4 Decimal,US Dollar
+USD,United States Dollar,US Dollar
+USDN,(Internal) United States Dollar (5 Dec.),US Dollar
+UYU,Uruguayan Peso (new),Peso
+UZS,Uzbekistan Som,Total
+VEB,Venezuelan Bolivar,Bolivar
+VND,Vietnamese Dong,Dong
+VUV,Vanuatu Vatu,Vatu
+WST,Samoan Tala,Tala
+XAF,Gabon CFA Franc BEAC,CFA Franc BEAC
+XCD,East Carribean Dollar,Dollar
+XEU,European Currency Unit (E.C.U.),E.C.U.
+XOF,Benin CFA Franc BCEAO,CFA Franc BCEAO
+XPF,CFP Franc,Franc
+YER,Yemeni Ryal,Yemeni Ryal
+YUM,New Yugoslavian Dinar (Old),New Dinar
+ZAR,South African Rand,Rand
+ZMK,Zambian Kwacha,Kwacha
+ZRN,Zaire (Old),Zaire
+ZWD,Zimbabwean Dollar,Zimbabwe Dollar

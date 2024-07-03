@@ -1,0 +1,44 @@
+{
+    "name": "OptiHub-backend",
+    "version": "1.0.0",
+    "description": "Express server for OptiHub",
+    "main": "server.js",
+    "scripts": {
+        "run:dev": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "anoop.krishnan@ivldsp.com",
+    "license": "ISC",
+    "dependencies": {
+        "@sap-cloud-sdk/util": "^2.9.0",
+        "@sap/hdbext": "^7.7.4",
+        "@sap/xsenv": "^3.4.0",
+        "@sap/xssec": "^3.2.17",
+        "axios": "^1.3.4",
+        "bcryptjs": "^2.4.3",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "generate-password": "^1.7.0",
+        "js-base64": "^3.7.2",
+        "jsonwebtoken": "^9.0.0",
+        "keygenerator": "^1.0.4",
+        "moment": "^2.29.4",
+        "node-rsa": "^1.1.1",
+        "passport": "^0.6.0",
+        "pdf-img-convert": "^1.1.1",
+        "pdf-parse": "^1.1.1",
+        "pdfjs-dist": "^3.9.179",
+        "randomstring": "^1.3.0",
+        "tesseract.js": "^4.0.0",
+        "uuid": "^8.3.2",
+        "validator": "^13.7.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.14.9"
+    },
+    "engines": {
+        "node": "^16",
+        "npm": "^8"
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "xsappname": "optihub-dev",
+    "tenant-mode": "dedicated",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.OptihubAdmin",
+            "description": "Optihub Admin"
+        },
+        {
+            "name": "$XSAPPNAME.OptihubUser",
+            "description": "Optihub User"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "OptihubAdmin",
+            "description": "Admin role for Optihub",
+            "scope-references": [
+                "$XSAPPNAME.OptihubAdmin"
+            ]
+        },
+        {
+            "name": "OptihubUser",
+            "description": "User role for Optihub",
+            "scope-references": [
+                "$XSAPPNAME.OptihubUser"
+            ]
+        }
+    ],
+    "role-collections": [
+        {
+            "name": "Optihub_Admin",
+            "description": "Admin access for Optihub",
+            "role-template-references": [
+                "$XSAPPNAME.OptihubAdmin"
+            ]
+        },
+        {
+            "name": "Optihub_User",
+            "description": "User access for Optihub",
+            "role-template-references": [
+                "$XSAPPNAME.OptihubUser"
+            ]
+        }
+    ],
+    "authorities": [
+        "$ACCEPT_GRANTED_AUTHORITIES"
+    ]
+}

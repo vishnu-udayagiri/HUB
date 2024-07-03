@@ -1,0 +1,68 @@
+<mvc:View class="sapUiSizeCompact" height="100%" controllerName="com.ivl.optihub.ui5.controller.ExtractPDF"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:ce="sap.ui.codeeditor">
+    <Page title="{i18n>txtExtractPDF}">
+        <l:VerticalLayout id="containerLayout" width="100%" class="sapUiTinyMarginTop">
+            <l:BlockLayout id="BlockLayout" background="Dashboard">
+                <l:BlockLayoutRow id="_IDGenBlockLayoutRow1" accentCells="Accent1">
+                    <l:BlockLayoutCell id="Accent1">
+                        <f:SimpleForm id="SimpleFormChangeColumn_oneGroup" editable="true" layout="ColumnLayout">
+                            <f:toolbar>
+                                <Toolbar id="TB1">
+                                    <Title id="Title1" text="{i18n>TtlDocDet}"/>
+                                </Toolbar>
+                            </f:toolbar>
+                            <f:content>
+                                <Label id="_IDGenLabel1" text="{i18n>txtOriginator}" />
+                                <ComboBox id="vendorCode" selectedKey="{docDetailModel>/originatorCode}" items="{originatorsModel>/}" change="onChangeOriginator">
+                                    <core:ListItem key="{originatorsModel>originatorCode}" text="{originatorsModel>originatorName}" />
+                                </ComboBox>
+                                <Button id="_IDGenButton1" tooltip="{i18n>btnCreateOriginator}" class="sapUiSizeCompact" type="Ghost" press="onPressCreateOriginator" icon="sap-icon://edit">
+                                    <layoutData>
+                                        <f:ColumnElementData id="_IDGenColumnElementData1" cellsSmall="2" cellsLarge="2" />
+                                    </layoutData>
+                                </Button>
+                                <Label id="_IDGenLabel2" text="{i18n>lblType/SubType}" />
+                                <Select id="type" selectedKey="{docDetailModel>/documentTypeCode}" forceSelection="false" items="{typeDataModel>/}" editable="false" change="onChangeDocTypes">
+                                    <core:ListItem id="_IDGenListItem2" key="{typeDataModel>documentTypeCode}" text="{typeDataModel>documentTypeName}" />
+                                </Select>
+                                <Select id="subType" selectedKey="{docDetailModel>/documentSubType}" forceSelection="false" items="{filtDocSubTypeModel>/}" editable="false" change="onChangeDocSubTypes">
+                                    <core:ListItem key="{filtDocSubTypeModel>documentSubType}" text="{filtDocSubTypeModel>documentSubName}" />
+                                </Select>
+                                <Button id="_btnGenerate" tooltip="{i18n>btnGenerate}" type="Ghost" press="onPressGenerateTemplate" icon="sap-icon://generate-shortcut" enabled="false">
+                                    <layoutData>
+                                        <f:ColumnElementData id="_IDGenColumnElementData2" cellsSmall="2" cellsLarge="2" />
+                                    </layoutData>
+                                </Button>
+                                <Label id="_IDGenLabel3" text="{i18n>txtInvoice}"/>
+                                <u:FileUploader iconOnly="true" enabled="false" id="fileUploader" width="100%" multiple="true" placeholder="{i18n>txtUploadInvoice}" sameFilenameAllowed="true" fileType="pdf,PDF" icon="sap-icon://browse-folder" buttonText="Browse" tooltip="Upload Invoice..." change="onFileChange"/>
+                                <Label id="_IDGenLabel4"/>
+                                <Button id="extractFieldsId" text="Extract Fields" press="onExtractFields" enabled="false"/>
+                                <Button id="openTrainerId" text="Open Trainer" press="onOpenTrainer" enabled="false"/>
+                            </f:content>
+                        </f:SimpleForm>
+                    </l:BlockLayoutCell>
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell1" width="2">
+                        <f:SimpleForm editable="false" id="sfExtractedField" visible="false">
+                            <f:toolbar>
+                                <Toolbar id="TB2">
+                                    <Title id="Title2" text="{i18n>TtlExtractedFields}"/>
+                                    <ToolbarSpacer/>
+                                    <Button icon="sap-icon://copy" tooltip="Copy JSON" press="copyJson"/>
+                                </Toolbar>
+                            </f:toolbar>
+                            <f:content>
+                                <ce:CodeEditor id="tct" type="json" value="" editable="false" maxLines="30"/>
+                            </f:content>
+                        </f:SimpleForm>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+        </l:VerticalLayout>
+    </Page>
+</mvc:View>

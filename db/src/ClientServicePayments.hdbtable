@@ -1,0 +1,11 @@
+----- ClientServicePayments.hdbtable -----
+COLUMN TABLE "ClientServicePayments" (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "subscriptionPlanId" NVARCHAR(36) NOT NULL,
+  "paymentId" INTEGER NOT NULL,
+  "paidOn" TIMESTAMP NOT NULL,
+  "paymentMethod" NVARCHAR(1),
+  "currency" NVARCHAR(5) NOT NULL,
+  "paidAmount" DECIMAL(14, 3) NOT NULL,
+  PRIMARY KEY("clientId","subscriptionPlanId", "paymentId")
+)

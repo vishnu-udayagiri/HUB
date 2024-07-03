@@ -1,0 +1,8 @@
+----- Country.hdbtable -----
+COLUMN TABLE "Country" (
+  "countryKey" NVARCHAR(3) NOT NULL,
+  "countryName" NVARCHAR(50) NOT NULL,
+  "language" NVARCHAR(2),
+  "currency" NVARCHAR(5),
+  PRIMARY KEY("countryKey")
+)

@@ -1,0 +1,10 @@
+{
+    "stage": "https://demoapi.exactgst.com",
+    "client_id": "f00021ae-f6dc-4e14-8d99-577f865d6964",
+    "client_secret": "42af84cca4674936a9b25924756c6a86",
+    "Username": "Excellon",
+    "Password": "123@Excellon",
+    "gstin": "29AAYPT1804B000",
+    "esession": {},
+    "isession": {}
+}

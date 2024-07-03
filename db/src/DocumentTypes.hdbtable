@@ -1,0 +1,6 @@
+----- DocumentTypes.hdbtable -----
+COLUMN TABLE "DocumentTypes" (
+  "documentTypeCode" NVARCHAR(4) NOT NULL,
+  "documentTypeName" NVARCHAR(40) NOT NULL,
+  PRIMARY KEY("documentTypeCode")
+)

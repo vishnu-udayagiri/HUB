@@ -1,0 +1,15 @@
+----- ClientServices.hdbtable -----
+COLUMN TABLE "ClientServices" (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "subscriptionPlanId" NVARCHAR(36) NOT NULL,
+  "validFrom" DATE NOT NULL,
+  "serviceId" NVARCHAR(20) NOT NULL,
+  "validTo" DATE NOT NULL,
+  "isActive" BOOLEAN DEFAULT TRUE,
+  "rateType" NVARCHAR(1) NOT NULL,
+  "rateAmount" DECIMAL(14, 3) NOT NULL,
+  "periodType" NVARCHAR(1),
+  "reqdUnits" INTEGER,
+  "estimatedAmount" DECIMAL(14, 3) NOT NULL,
+  PRIMARY KEY("clientId", "subscriptionPlanId", "validFrom", "serviceId", "validTo")
+)

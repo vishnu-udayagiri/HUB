@@ -1,0 +1,6 @@
+----- Language.hdbtable -----
+COLUMN TABLE "Language" (
+  "languageCode" NVARCHAR(2) NOT NULL,
+  "languageName" NVARCHAR(20) NOT NULL,
+  PRIMARY KEY("languageCode")
+)

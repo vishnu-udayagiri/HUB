@@ -1,0 +1,40 @@
+{
+    "welcomeFile": "./portal/webapp/index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/hub/(.*)$",
+            "authenticationType": "none",
+            "target": "$1",
+            "destination": "hub"
+        },
+        {
+            "source": "^/us/(.*)$",
+            "authenticationType": "none",
+            "destination": "hub"
+        },
+        {
+            "source": "^/admin-srv/(.*)$",
+            "authenticationType": "xsuaa",
+            "target": "$1",
+            "scope": "$XSAPPNAME.OptihubAdmin",
+            "destination": "admin"
+        },
+        {
+            "source": "^/portal/(.*)",
+            "authenticationType": "none",
+            "localDir": "web"
+        },
+        {
+            "source": "^/admin/(.*)",
+            "authenticationType": "xsuaa",
+            "localDir": "web",
+            "scope": "$XSAPPNAME.OptihubAdmin"
+        },
+        {
+            "source": "^/api/(.*)$",
+            "authenticationType": "none",
+            "destination": "hub"
+        }
+    ]
+}

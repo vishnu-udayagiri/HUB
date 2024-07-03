@@ -1,0 +1,156 @@
+Enter your custom styles here .sapMGenericTagWrap {
+    height: 2rem;
+}
+
+.sapUiTableDataCell,
+.sapMText,
+.sapUiTableCreationRow .sapUiTableCreationRowForm .sapUiTableCell {
+    cursor: pointer;
+}
+
+.sapFAvatarXL {
+    height: 4rem;
+    width: 16rem;
+}
+
+
+/* .sapUiTableCell.sapUiTableHeaderCell {
+    background-color: rgb(255, 6, 6);
+} */
+
+.sapUiSizeCompact .sapUiTableCell .sapMLabel,
+.sapUiSizeCondensed .sapUiTableCell .sapMLabel {
+    font-weight: bolder;
+}
+
+
+/* Enter your custom styles here */
+
+.gridWrapperBody {
+    height: 100% !important;
+    /* background-color: aqua; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.loginBox {
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.gridWrapperBody>div:first-child {
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logoBox {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: center;
+}
+
+.formBox {
+    margin-top: 10px;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.logoBox>img {
+    margin-top: 20%;
+    size: 200px;
+}
+
+.bgImage {
+    background-image: url("bg.jpg");
+    /* background: linear-gradient(105deg, rgb(213 213 213 / 76%) 0%, rgb(231 231 231) 96%), url(bg.jpg); */
+    background-size: cover;
+}
+
+#container-vendorportal---register--page-intHeader-BarLeft {
+    margin-top: 18px;
+}
+
+.color {
+    background-color: #ffffff;
+    border-top: 1px solid #ffffff;
+}
+
+.footerImg {
+    width: 30px;
+    height: 10px;
+}
+
+.color {
+    background-color: #ffffff;
+    border-top: 1px solid #ffffff;
+}
+
+.sapMGTHdrTxt>.sapMText {
+    font-weight: bold;
+}
+
+.sapMGT.OneByOne:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #eff4f9;
+}
+
+.sapMGTHdrTxt>.sapMText {
+    text-align: center !important;
+}
+
+.TwoByHalf .sapMGTContent .sapMTileCnt .sapMTileCntContent .sapMNCLargeFontSize {
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 0.55rem;
+    height: auto;
+    align-self: center;
+}
+
+.sapFCardNumericIndicators {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sapMGTSubHdrTxt>.sapMText,
+.sapMGTSubHdrTxt {
+    text-align: center;
+}
+
+
+/* .overflow {
+    overflow-x: scroll;
+} */
+
+.widthForSmallObjectNumber {
+    min-width: auto;
+    max-width: 50rem;
+}
+
+.widthForObjectNumber {
+    min-width: 10.25rem;
+}
+
+.widthForLargeObjectNumber {
+    min-width: 50rem;
+}
+
+.sapMBarTitleAlignAuto .sapMBarPH {
+    justify-content: center;
+}
+
+
+/* .widthForLargeObjectNumber {
+    width: var(--object-number-width);
+} */

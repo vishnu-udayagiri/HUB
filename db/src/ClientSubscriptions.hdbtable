@@ -1,0 +1,14 @@
+--
+--- ClientSubscriptions.hdbtable
+--
+---
+COLUMN TABLE "ClientSubscriptions" (
+  "clientId" NVARCHAR(36) NOT NULL,
+  "subscriptionPlanId" NVARCHAR(36) NOT NULL,
+  "validFrom" DATE NOT NULL,
+  "validTo" DATE,
+  "isActive" BOOLEAN DEFAULT TRUE,
+  "totalUsageAmt" DECIMAL(14, 3),
+  "totalPaidAmt" DECIMAL(14, 3),
+  PRIMARY KEY("clientId", "subscriptionPlanId", "validFrom")
+)
